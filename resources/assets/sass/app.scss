@@ -1,0 +1,81 @@
+// Fonts
+// @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import "raleway-font.scss";
+// Variables
+@import "variables";
+// Foundation
+@import "./vendor/zurb/foundation/scss/foundation.scss";
+@import "navbar.scss";
+@import "login.scss";
+
+@include foundation-everything(true);
+
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: tahoma !important;
+  font-weight: 300;
+  height: 100vh;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway' !important;
+}
+
+.content-wrapper {
+  margin-top: 35px;
+}
+
+.text-white {
+  color: #FFE !important;
+}
+
+.lighter {
+  font-weight: lighter;
+}
+
+.error-text {
+  color: #ff505e !important;
+  font-weight: 300;
+}
+
+.button, a {
+  font-weight: 400;
+}
+
+.brand {
+  span {
+    color: white !important;
+  }
+  color: orangered !important;
+}
+
+.wizard > .steps li {
+  float: left;
+}
+
+.wizard > .content > *:not(.current){
+  display:none;
+}
+
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea{
+  border: 1px solid #cacaca;
+}
+
+[type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus{
+  border: 1px solid #98cbe8;
+}
+
+.order-box:first-child{
+  border-right: 1px dashed #ddd;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=date]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
