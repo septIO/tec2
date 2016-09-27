@@ -35,7 +35,7 @@ class trackOrder extends FormRequest
          * Lastly, it needs to exist in the order table.
          */
         return [
-            'trackingnumber' => 'bail|required|alpha_num|size:16|string|exists:orders,guid'
+            'trackingnumber' => 'bail|required|alpha_num|size:12|string|exists:orders,guid'
         ];
     }
 }

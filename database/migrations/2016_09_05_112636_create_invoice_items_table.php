@@ -13,6 +13,11 @@ class CreateInvoiceItemsTable extends Migration
      */
     public function up()
     {
+        Schema::create('item_types', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('type')->unique();
+        });
+
         Schema::create('invoice_items', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
@@ -21,6 +26,9 @@ class CreateInvoiceItemsTable extends Migration
             $table->integer('height');
             $table->integer('depth');
             $table->string('invoice_id');
+            $table->unsignedInteger('item_type');
+            $table->foreign('item_type')->references('id')->on('item_types');
+            $table->string('trackingnumber');
         });
     }
 
@@ -32,5 +40,6 @@ class CreateInvoiceItemsTable extends Migration
     public function down()
     {
         Schema::drop('invoice_items');
+        Schema::drop('item_types');
     }
 }

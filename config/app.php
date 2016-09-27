@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'My Application',
+    'name' => 'TecCargo',
 
     /*
     |--------------------------------------------------------------------------
@@ -169,6 +169,8 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Validation\ValidationServiceProvider::class,
+        Milon\Barcode\BarcodeServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
         //
 
         /*
@@ -226,7 +228,14 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Uuid' => Webpatser\Uuid\Uuid::class,
+        'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
+        'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'role' => \Zizaco\Entrust\Middleware\EntrustRole::class,
+        'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
+        'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,
     ],
 
 ];
