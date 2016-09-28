@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+    Registrer ny bruger
+@endsection
 @section('content')
 
     <div class="row">

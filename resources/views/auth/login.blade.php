@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+    Login
+@endsection
 @section('content')
     <div class="row">
         <div class="medium-6 medium-offset-3 large-4 large-offset-4 columns ">

@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+    Tracking
+@endsection
 @section('stylesheets')
 @endsection
 @section('content')
